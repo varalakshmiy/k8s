@@ -115,14 +115,15 @@ spec:
           - key: region
             operator: In
             values:
-            - us-east
+            - ap-south-1
           - key: zone
             operator: In
             values:
-            - zone1
+            - ap-south-1c
   containers:
   - name: nginx
     image: nginx
+
 ```
 
 4. Apply Pod:
