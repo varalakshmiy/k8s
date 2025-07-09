@@ -39,6 +39,10 @@ spec:
   containers:
   - name: mysql
     image: mysql
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: mypassword  # Replace with strong password
+
 ```
 
 4. Apply Pod:
