@@ -144,16 +144,29 @@ Check Node Labels, Operators, Typing Mistakes.
 
 Preferred Node Affinity Example:
 ```yaml
-affinity:
-  nodeAffinity:
-    preferredDuringSchedulingIgnoredDuringExecution:
-    - weight: 1
-      preference:
-        matchExpressions:
-        - key: region
-          operator: In
-          values:
-          - us-east
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-app-pod
+spec:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        preference:
+          matchExpressions:
+          - key: region
+            operator: In
+            values:
+            - ap-south-1
+          - key: zone
+            operator: In
+            values:
+            - ap-south-1b
+  containers:
+  - name: nginx
+    image: nginx
+
 ```
 
 ---
