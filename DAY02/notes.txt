@@ -443,7 +443,7 @@ kubectl config set-context --current --namespace=default
 
 7. Namespace Resource Quotas
 -----------------------------
-
+we can resrict resource quots in namespace level also
 You can define resource quotas and limits per namespace to control the usage of resources:
 
 apiVersion: v1
