@@ -438,7 +438,7 @@ kubectl apply -f pod.yaml
 6. Switching Namespaces in kubectl Context
 --------------------------------------------
 
-kubectl config set-context --current --namespace=prod
+kubectl config set-context --current --namespace=test  ============making test as default namespace====
 
 7. Namespace Resource Quotas
 -----------------------------
